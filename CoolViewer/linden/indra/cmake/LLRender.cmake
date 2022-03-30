@@ -1,0 +1,11 @@
+# -*- cmake -*-
+if (LLRENDER_CMAKE_INCLUDED)
+  return()
+endif (LLRENDER_CMAKE_INCLUDED)
+set (LLRENDER_CMAKE_INCLUDED TRUE)
+
+include(FreeType)
+
+set(LLRENDER_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/llrender)
+
+set(LLRENDER_LIBRARIES llrender ${FREETYPE2_LIBRARIES})

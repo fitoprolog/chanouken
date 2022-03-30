@@ -1,0 +1,18 @@
+# -*- cmake -*-
+if (LLIMAGE_CMAKE_INCLUDED)
+  return()
+endif (LLIMAGE_CMAKE_INCLUDED)
+set (LLIMAGE_CMAKE_INCLUDED TRUE)
+
+include(JPEG)
+include(OpenJPEG)
+include(PNG)
+
+set(LLIMAGE_INCLUDE_DIRS
+    ${CMAKE_SOURCE_DIR}/llimage
+    ${PNG_INCLUDE_DIRS}
+    ${JPEG_INCLUDE_DIRS}
+    ${OPENJPEG_INCLUDE_DIR}
+    )
+
+set(LLIMAGE_LIBRARIES llimage)

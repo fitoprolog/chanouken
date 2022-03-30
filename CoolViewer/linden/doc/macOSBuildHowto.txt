@@ -1,0 +1,37 @@
+A.- Requirements
+
+To build on macOS you need Xcode 11 (get it from the App store or the Apple
+developer site) and therefore macOS Catalina (the target system/SDK is set
+by the viewer build scripts to v10.9, so the resulting viewer binary should
+nonetheless be compatible with OS X Mavericks or newer Mac systems).
+It should also build with Xcode 12 (with some more link-time warnings due to
+a few badly targetted libraries built by Linden Lab).
+You additionally need CMake, in order to create the Xcode project files.
+You can install it with the DMG donwloaded from: https://cmake.org/download/
+IMPORTANT: cmake v3.12.0 is the *minimum* cmake version required for buidling
+with Xcode 10 or newer. CMake v3.16+ is recommended for a faster compilation.
+Also make sure to run:
+sudo "/Applications/CMake.app/Contents/bin/cmake-gui" --install
+in order to get the command line cmake to be properly installed.
+
+
+B.- Building
+
+To build a viewer release (x86, 64 bits only) from the sources:
+
+1.- Extract the viewer sources from the tarball.
+2.- Open a terminal.
+3.- Change to the linden/ directory.
+4.- Type: ./macos-prebuild.sh
+5.- Launch Xcode and open the project:
+	linden/build-darwin-x86_64/CoolVLViewer.xcodeproj
+6.- In the Xcode window that opened on the CoolVLViewer project, look on the
+    left of the title bar and check that the active scheme is reading either:
+    "ALL_BUILD > My Mac" or "viewer > My Mac" (if not, click on it and change
+    it for one of those).
+7.- Build the viewer from the menu bar "Product" -> "Build For" -> "Running".
+8.- Cross your fingers...
+
+With some luck (did you properly cross your fingers ?), you should find the
+resulting, ready to run "Cool VL Viewer.app" in the following directory:
+linden/build-darwin-x86_64/

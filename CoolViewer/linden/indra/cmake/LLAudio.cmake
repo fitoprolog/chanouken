@@ -1,0 +1,16 @@
+# -*- cmake -*-
+if (LLAUDIO_CMAKE_INCLUDED)
+  return()
+endif (LLAUDIO_CMAKE_INCLUDED)
+set (LLAUDIO_CMAKE_INCLUDED TRUE)
+
+include(FMOD)
+include(OPENAL)
+
+set(LLAUDIO_INCLUDE_DIRS
+    ${CMAKE_SOURCE_DIR}/llaudio
+	${FMOD_INCLUDE_DIR}
+	${OPENAL_INCLUDE_DIR}
+    )
+
+set(LLAUDIO_LIBRARIES llaudio)

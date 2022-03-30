@@ -1,0 +1,3 @@
+The Dark skin has been created by JB Kraft and borrowed from the Phoenix viewer
+with adaptations to textures.xml by Henri Beauchamp so to work with the
+Cool VL Viewer v1.25+ (Snowglobe v1.4 code base).
