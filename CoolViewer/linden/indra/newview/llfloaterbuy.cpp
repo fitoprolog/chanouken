@@ -52,8 +52,7 @@
 
 LLFloaterBuy::LLFloaterBuy(const LLSD&)
 {
-	LLUICtrlFactory::getInstance()->buildFloater(this,
-												 "floater_buy_object.xml");
+	LLUICtrlFactory::getInstance()->buildFloater(this,"floater_buy_object.xml");
 }
 
 //virtual

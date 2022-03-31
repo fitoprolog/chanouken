@@ -111,6 +111,7 @@ set(viewer_SOURCE_FILES
   llfirstuse.cpp
   llflexibleobject.cpp
   llfloaterabout.cpp
+  llfloatermyfirstfloater.cpp
   llfloateractivespeakers.cpp
   llfloateranimpreview.cpp
   hbfloaterareasearch.cpp
